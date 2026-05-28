@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation - Adhyatmah</title>
+    <style>
+      body {
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: #f8fafc;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        color: #1a202c;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      .email-wrapper {
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      .header-banner {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 30px 20px;
+        text-align: center;
+        position: relative;
+      }
+
+      .logo {
+        max-width: 120px;
+        height: auto;
+        filter: brightness(0) invert(1);
+      }
+
+      .main-content {
+        padding: 30px 20px;
+      }
+
+      .greeting {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a202c;
+        margin: 0 0 20px 0;
+        text-align: center;
+      }
+
+      .success-box {
+        background-color: #f0fdf4;
+        border: 1px solid #bbf7d0;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .success-icon {
+        width: 60px;
+        height: 60px;
+        background-color: #22c55e;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+
+      .checkmark {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .success-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #22c55e;
+        margin: 0 0 10px 0;
+      }
+
+      .success-message {
+        color: #374151;
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .order-details {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 30px 0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .order-details th {
+        background-color: #667eea;
+        color: #ffffff;
+        padding: 15px 10px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .order-details td {
+        padding: 15px 10px;
+        text-align: center;
+        border-bottom: 1px solid #e5e7eb;
+        vertical-align: middle;
+      }
+
+      .order-details tr:last-child td {
+        border-bottom: none;
+      }
+
+      .product-image {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .product-name {
+        font-weight: 600;
+        color: #1a202c;
+        text-align: left;
+      }
+
+      .order-summary {
+        background-color: #f8fafc;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 30px 0;
+      }
+
+      .summary-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #1a202c;
+        margin: 0 0 15px 0;
+        text-align: center;
+      }
+
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .summary-row:last-child {
+        border-bottom: none;
+        font-weight: 700;
+        font-size: 16px;
+        color: #1a202c;
+        padding-top: 15px;
+        margin-top: 10px;
+        border-top: 2px solid #667eea;
+      }
+
+      .summary-label {
+        color: #6b7280;
+        font-weight: 500;
+      }
+
+      .summary-value {
+        color: #1a202c;
+        font-weight: 600;
+      }
+
+      .cta-section {
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      .cta-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        display: inline-block;
+        transition: transform 0.2s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-1px);
+      }
+
+      .footer {
+        background-color: #f8fafc;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #e5e7eb;
+      }
+
+      .footer-text {
+        color: #6b7280;
+        font-size: 12px;
+        margin: 0;
+      }
+
+      .support-info {
+        margin: 20px 0;
+        text-align: center;
+        color: #6b7280;
+        font-size: 13px;
+      }
+
+      .support-link {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .container {
+          margin: 0;
+          border-radius: 0;
+        }
+        
+        .email-wrapper {
+          border-radius: 0;
+        }
+        
+        .main-content {
+          padding: 20px 15px;
+        }
+        
+        .header-banner {
+          padding: 20px 15px;
+        }
+        
+        .greeting {
+          font-size: 20px;
+        }
+        
+        .order-details th,
+        .order-details td {
+          padding: 10px 5px;
+          font-size: 12px;
+        }
+        
+        .product-image {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="email-wrapper">
+        <!-- Header Banner -->
+        <div class="header-banner">
+          <img
+            src="https://pandit-ji-seven.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdmtkuwoaf%2Fimage%2Fupload%2Fv1758695655%2Flaeztwr1pneb1iaoom7v.png&w=1920&q=75"
+            alt="Adhyatmah Logo"
+            class="logo"
+          />
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+          <!-- Greeting -->
+          <h1 class="greeting">Hello, {{recipientName}}! 🎉</h1>
+
+          <!-- Success Confirmation Box -->
+          <div class="success-box">
+            <div class="success-icon">
+              <span class="checkmark">✓</span>
+            </div>
+            <h2 class="success-title">Order Confirmed Successfully!</h2>
+            <p class="success-message">
+              Thank you for your purchase. We've received your order and it's being processed. 
+              When your order ships, we will send you another email with tracking information.
+            </p>
+          </div>
+
+          <!-- Order Details Table -->
+          <table class="order-details">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>SKU</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{items}}
+            </tbody>
+          </table>
+
+          <!-- Order Summary -->
+          <div class="order-summary">
+            <h3 class="summary-title">Order Summary</h3>
+            <div class="summary-row">
+              <span class="summary-label">Subtotal:</span>
+              <span class="summary-value">₹{{subTotal}}</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Shipping:</span>
+              <span class="summary-value">₹{{Shipping}}</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Grand Total:</span>
+              <span class="summary-value">₹{{grandTotal}}</span>
+            </div>
+          </div>
+
+          <!-- Call to Action -->
+          <div class="cta-section">
+            <a href="#" class="cta-button">Track Your Order</a>
+          </div>
+
+          <!-- Support Information -->
+          <div class="support-info">
+            <p>If you have any questions, we're always here to help. Thanks for choosing Adhyatmah!</p>
+            <p>Need help? Contact our support team: <a href="mailto:support@adhyatmah.com" class="support-link">support@adhyatmah.com</a></p>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+          <p class="footer-text">
+            Warm regards,<br>
+            <strong>The Adhyatmah Team</strong> 🕉️<br>
+            <a href="https://adhyatmah.com" style="color: #667eea; text-decoration: none;">www.adhyatmah.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

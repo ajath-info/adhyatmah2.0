@@ -1,0 +1,124 @@
+{
+  "main": {
+    "businessName": "adhyatmah",
+    "domainName": "www.adhyatmah.com",
+    "websiteStatus": true,
+    "offlineMessage": "We are currently undergoing maintenance. Please check back soon.",
+    "seo": {
+      "metaTitle": "adhyatmah- React Multivendor Ecommerce Script with Next js & MongoDB",
+      "metaDescription": "adhyatmahis your all-in-one ecommerce solution with top products, fast delivery, and best prices.",
+      "description": "Welcome to adhyatmah, a modern ecommerce platform offering a wide range of products from electronics to fashion, ensuring quality, convenience, and speed.",
+      "tags": ["adhyatmah", "ecommerce", "shopping", "online store", "best deals"]
+    },
+
+    "gaId": "UA-adhyatmah-1",
+    "gtmId": "GTM-adhyatmah",
+    "shippingFee": 10,
+    "commission": 0
+  },
+  "home": {
+    "slides": [
+      {
+        "image": {
+          "_id": "slide1",
+          "url": "https://adhyatmah-fe-staging.vercel.app/images/slide-1.png"
+        },
+        "link": "/products"
+      },
+      {
+        "image": {
+          "_id": "slide2",
+          "url": "https://adhyatmah-fe-staging.vercel.app/images/slide-2.png"
+        },
+        "link": "/products"
+      }
+    ],
+    "banner1": {
+      "image": {
+        "_id": "banner1",
+        "url": "https://adhyatmah-fe-staging.vercel.app/images/banner-1.png"
+      },
+      "link": "/products?category=shoes"
+    },
+    "banner2": {
+      "image": {
+        "_id": "banner2",
+        "url": "https://adhyatmah-fe-staging.vercel.app/images/banner-2.png"
+      },
+      "link": "/products?category=watches"
+    }
+  },
+
+  "branding": {
+    "theme": {
+      "palette": {
+        "primary": "#0A52AE",
+        "secondary": "#CC2131",
+        "paperLight": "#FFFFFF",
+        "paperDark": "#212B36",
+        "defaultDark": "#161C24",
+        "defaultLight": "#F9FAFB"
+      },
+      "themeName": "default",
+      "fontFamily": "roboto"
+    },
+    "contact": {
+      "address": "adhyatmahHQ, 123 Innovation Street, Tech City",
+      "addressOnMap": "https://maps.google.com/?q=adhyatmah+HQ",
+      "lat": "37.7749",
+      "long": "-122.4194",
+      "email": "support@adhyatmah.com",
+      "phone": "+919876543210",
+      "whatsappNo": "+919876543210"
+    },
+    "socialLinks": {
+      "facebook": "https://facebook.com/adhyatmah",
+      "twitter": "https://twitter.com/adhyatmah",
+      "linkedin": "https://linkedin.com/company/adhyatmah",
+      "instagram": "https://instagram.com/adhyatmah",
+      "whatsapp": "https://wa.me/1234567890"
+    },
+    "logoDark": {
+      "_id": "logo-dark",
+      "url": "https://adhyatmah-fe-staging.vercel.app/logo-dark.svg"
+    },
+    "logoLight": {
+      "_id": "logo-light",
+      "url": "https://adhyatmah-fe-staging.vercel.app/logo-light.svg"
+    },
+    "favicon": {
+      "_id": "favicon",
+      "url": "https://adhyatmah-fe-staging.vercel.app/favicon.ico"
+    }
+  },
+  "general": {
+    "smtp": {
+      "isActive": false,
+      "host": "google.com",
+      "port": 465,
+      "user": "johndoe@gmail.com",
+      "password": "test1234",
+      "fromEmail": "johndoe@gmail.com",
+      "secure": false
+    },
+
+    "paypal": {
+      "isActive": false,
+      "mode": "sandbox",
+      "clientId": "PAYPAL-SANDBOX-CLIENT-ID-123456"
+    },
+    "stripe": {
+      "isActive": false,
+      "mode": "sandbox",
+      "publishableKey": "STRIPE-PUBLISHABLE-KEY-TEST-123456",
+      "secretKey": "STRIPE-SECRET-KEY-TEST-ABCDEF"
+    },
+
+    "cloudinary": {
+      "cloudName": "demo-cloud",
+      "apiKey": "123456789012345",
+      "apiSecret": "abcDEFghiJKLmnopQRS",
+      "preset": "adhyatmah_uploads"
+    }
+  }
+}

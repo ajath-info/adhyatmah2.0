@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Reset - Adhyatmah</title>
+    <style>
+      body {
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: #f8fafc;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        color: #1a202c;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      .email-wrapper {
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      .header-banner {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 30px 20px;
+        text-align: center;
+        position: relative;
+      }
+
+      .logo {
+        max-width: 120px;
+        height: auto;
+        filter: brightness(0) invert(1);
+      }
+
+      .main-content {
+        padding: 30px 20px;
+      }
+
+      .greeting {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a202c;
+        margin: 0 0 20px 0;
+        text-align: center;
+      }
+
+      .reset-box {
+        background-color: #f8fafc;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 30px;
+        margin: 30px 0;
+        text-align: center;
+      }
+
+      .reset-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a202c;
+        margin: 0 0 15px 0;
+      }
+
+      .reset-description {
+        color: #6b7280;
+        margin: 0 0 25px 0;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .cta-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px 40px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        display: inline-block;
+        transition: transform 0.2s ease;
+        margin: 20px 0;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-1px);
+      }
+
+      .security-info {
+        background-color: #fef3c7;
+        border: 1px solid #f59e0b;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .security-info-text {
+        color: #92400e;
+        font-size: 13px;
+        margin: 0;
+        font-weight: 500;
+      }
+
+      .warning-note {
+        background-color: #fef2f2;
+        border: 1px solid #fecaca;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .warning-note-text {
+        color: #991b1b;
+        font-size: 13px;
+        margin: 0;
+        font-weight: 500;
+      }
+
+      .footer {
+        background-color: #f8fafc;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #e5e7eb;
+      }
+
+      .footer-text {
+        color: #6b7280;
+        font-size: 12px;
+        margin: 0;
+      }
+
+      .support-info {
+        margin: 20px 0;
+        text-align: center;
+        color: #6b7280;
+        font-size: 13px;
+      }
+
+      .support-link {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .container {
+          margin: 0;
+          border-radius: 0;
+        }
+        
+        .email-wrapper {
+          border-radius: 0;
+        }
+        
+        .main-content {
+          padding: 20px 15px;
+        }
+        
+        .header-banner {
+          padding: 20px 15px;
+        }
+        
+        .greeting {
+          font-size: 20px;
+        }
+        
+        .cta-button {
+          padding: 12px 30px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="email-wrapper">
+        <!-- Header Banner -->
+        <div class="header-banner">
+          <img
+            src="https://pandit-ji-seven.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdmtkuwoaf%2Fimage%2Fupload%2Fv1758695655%2Flaeztwr1pneb1iaoom7v.png&w=1920&q=75"
+            alt="Adhyatmah Logo"
+            class="logo"
+          />
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+          <!-- Greeting -->
+          <h1 class="greeting">Password Reset Request 🔐</h1>
+
+          <!-- Reset Box -->
+          <div class="reset-box">
+            <h2 class="reset-title">Reset Your Password</h2>
+            <p class="reset-description">
+              We received a request to reset your password for your Adhyatmah account. 
+              If you made this request, click the button below to reset your password. 
+              If you didn't make this request, you can safely ignore this email.
+            </p>
+            
+            <a href="{{resetLink}}" class="cta-button">Reset My Password</a>
+            
+            <div class="security-info">
+              <p class="security-info-text">
+                ⏰ This link will expire in 24 hours for security reasons.
+              </p>
+            </div>
+          </div>
+
+          <!-- Warning Note -->
+          <div class="warning-note">
+            <p class="warning-note-text">
+              ⚠️ If you didn't request this password reset, please ignore this email. Your password will remain unchanged.
+            </p>
+          </div>
+
+          <!-- Support Information -->
+          <div class="support-info">
+            <p>Having trouble with the button? Copy and paste this link into your browser:</p>
+            <p style="word-break: break-all; font-size: 12px; color: #667eea;">{{resetLink}}</p>
+            <p>Need help? Contact our support team: <a href="mailto:support@adhyatmah.com" class="support-link">support@adhyatmah.com</a></p>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+          <p class="footer-text">
+            Warm regards,<br>
+            <strong>The Adhyatmah Team</strong> 🕉️<br>
+            <a href="https://adhyatmah.com" style="color: #667eea; text-decoration: none;">www.adhyatmah.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
