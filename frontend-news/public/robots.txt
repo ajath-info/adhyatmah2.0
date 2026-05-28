@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /cart
+Disallow: /profile/
+
+Sitemap: https://www.adhyatmah.com/sitemap.xml

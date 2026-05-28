@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://www.adhyatmah.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhyatmah.com/about</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhyatmah.com/shops</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhyatmah.com/products</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhyatmah.com/brands</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhyatmah.com/contact</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhyatmah.com/privacy-policy</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhyatmah.com/terms-and-conditions</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhyatmah.com/refund-return-policy</loc>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
