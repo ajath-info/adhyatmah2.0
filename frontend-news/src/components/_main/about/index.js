@@ -10,12 +10,6 @@ import AboutImage2 from 'public/images/adhyatmah-about-2.jpg';
 import WhyUs from '../home/why-us';
 
 const Data = [
-
-  {
-    name: 'Pandit Ji Services',
-    range: '100+',
-    description: 'Verified Pandit Ji services for all your spiritual needs.'
-  },
   {
     name: 'Conscious Vendors',
     range: '500+',
